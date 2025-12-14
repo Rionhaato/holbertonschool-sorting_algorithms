@@ -1,8 +1,10 @@
 #include <stddef.h>
 #include "sort.h"
 
-static void quick_sort_recursive(int *array, ssize_t low, ssize_t high, size_t size);
-static ssize_t lomuto_partition(int *array, ssize_t low, ssize_t high, size_t size);
+static void quick_sort_recursive(int *array, ssize_t low, ssize_t high,
+		size_t size);
+static ssize_t lomuto_partition(int *array, ssize_t low, ssize_t high,
+		size_t size);
 static void swap_ints(int *a, int *b);
 
 /**
@@ -26,7 +28,8 @@ void quick_sort(int *array, size_t size)
  * @high: ending index of partition
  * @size: full array size (for print_array)
  */
-static void quick_sort_recursive(int *array, ssize_t low, ssize_t high, size_t size)
+static void quick_sort_recursive(int *array, ssize_t low, ssize_t high,
+		size_t size)
 {
 	ssize_t p;
 
@@ -47,7 +50,8 @@ static void quick_sort_recursive(int *array, ssize_t low, ssize_t high, size_t s
  *
  * Return: final pivot index
  */
-static ssize_t lomuto_partition(int *array, ssize_t low, ssize_t high, size_t size)
+static ssize_t lomuto_partition(int *array, ssize_t low, ssize_t high,
+		size_t size)
 {
 	int pivot = array[high];
 	ssize_t i = low - 1;
